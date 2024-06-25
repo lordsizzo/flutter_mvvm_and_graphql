@@ -1,0 +1,38 @@
+name: flutter_mvvm_and_graphql
+description: "Flutter using MVVM and Graphql"
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.1 <4.0.0'
+
+dependencies:
+  #Riverpod
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.4
+  graphql: ^5.1.3
+
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+
+  #Adding these dependencies which are needed for MVVM and SwipeRefresh
+  build_runner:
+  custom_lint:
+  riverpod_generator: ^2.3.11
+  riverpod_lint: ^2.3.9
+  swipe_refresh: ^1.0.2
+
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+flutter:
+
+  uses-material-design: true
