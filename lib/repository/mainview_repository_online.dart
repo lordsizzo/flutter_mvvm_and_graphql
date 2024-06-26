@@ -1,5 +1,4 @@
 import '../domain/server/domain_server.dart';
-import '../model/mainview_model.dart';
 import '../model/mainview_model_online.dart';
 
 abstract class MainViewRepositoryOnlineApi {

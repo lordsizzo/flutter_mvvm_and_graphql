@@ -50,8 +50,7 @@ class _DomainServerImpl implements DomainServerApi {
         ),
       );
       if (result.data != null) {
-        List<dynamic> _characters =
-        result.data!['Page']['media'] as List<dynamic>;
+        List<dynamic> _characters = result.data!['Page']['media'] as List<dynamic>;
         if (_characters.isNotEmpty) {
           _characters.forEach(
                 (dynamic f) =>
@@ -64,12 +63,15 @@ class _DomainServerImpl implements DomainServerApi {
 
           graphQLList.complete(charactersList);
         } else {
-          graphQLList.completeError(throw Exception(
-              "Results empty: ${result.exception?.linkException}"));
+          throw Exception(
+              "${result.exception?.linkException}");
         }
+      }else {
+        throw Exception(
+            "${result.exception?.linkException}");
       }
     } catch (err, stack) {
-      graphQLList.complete(throw Exception("${err}"));
+      throw Exception("$err");
     }
     return graphQLList.future;
   }
